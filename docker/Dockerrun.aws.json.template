@@ -1,0 +1,18 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Authentication": {
+    "Bucket": "localservices-configuration",
+    "Key": "docker-hub/dockercfg"
+  },
+  "Image": {
+    "Name": "xolocalvendors/service-marketplace-api:{version}",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "80",
+      "HostPort": "80"
+    }
+  ],
+  "Logging": "/var/log/service-marketplace-api"
+}

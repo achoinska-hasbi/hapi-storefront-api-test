@@ -1,0 +1,9 @@
+FROM xolocalvendors/nodebox:8-latest
+MAINTAINER XO Group Team
+ENTRYPOINT ["docker-shell"]
+CMD ["-r"]
+ADD ./package.json $APPDIR/package.json
+ADD ./.npmrc $APPDIR/.npmrc
+RUN npm install -g shonkwrap
+RUN npm install --production
+RUN shonkwrap
