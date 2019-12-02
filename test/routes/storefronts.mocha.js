@@ -6,7 +6,7 @@ const plugin = require('../../src/plugin');
 const sinon  = require('sinon');
 let server;
 
-describe.only('Storefronts route', function() {
+describe('Storefronts route', function() {
     this.timeout(30000);
 
     before(async() => {

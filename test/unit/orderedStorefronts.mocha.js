@@ -3,7 +3,7 @@
 const expect = require('chai').expect;
 const orderedStorefronts = require('../../src/methods/search/orderedStorefronts.js');
 
-describe('orderedStorefronts', () => {
+describe.only('orderedStorefronts', () => {
     let storefronts;
 
     beforeEach(() => {

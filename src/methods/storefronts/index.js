@@ -8,4 +8,10 @@ const fetch = require('./fetch.js');
 
 module.exports = async(request) => {
     const { params } = request;
+    const storefront = fetch(params.id)
+    if (storefront) {
+        return storefront;
+    } else {
+        return Boom.notFound();
+    }
 };
