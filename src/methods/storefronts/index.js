@@ -9,4 +9,10 @@ const fetch = require('./fetch.js');
 
 module.exports = async(request) => {
     const { params } = request;
+    const found = fetch(params.id)
+    if (found) {
+        return found;
+    } else {
+        return Boom.notFound();
+    }
 };
