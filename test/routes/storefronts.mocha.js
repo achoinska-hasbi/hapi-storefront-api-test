@@ -25,7 +25,7 @@ describe.only('Storefronts route', function() {
 
     after(async() => await server.stop());
 
-    it.only('responds with the storefront data', async() => {
+    it('responds with the storefront data', async() => {
         const id = 9;
 
         const response = await server.inject({

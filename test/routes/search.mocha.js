@@ -24,7 +24,7 @@ describe('Search route', function() {
 
     after(async() => await server.stop());
 
-    it('responds with the storefronts array', async() => {
+    it.only('responds with the storefronts array', async() => {
         const categoryCode = 'rec';
 
         const response = await server.inject({
