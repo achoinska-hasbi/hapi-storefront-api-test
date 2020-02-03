@@ -7,4 +7,8 @@ const orderedStorefronts = require('./orderedStorefronts.js');
 
 module.exports = (request) => {
     const { query } = request;
+
+    const filterdStorefronts = fetchStorefronts(query.categoryCode);
+
+    return filterdStorefronts;
 };

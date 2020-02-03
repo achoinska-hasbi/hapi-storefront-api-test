@@ -6,7 +6,7 @@ const plugin = require('../../src/plugin');
 const sinon  = require('sinon');
 let server;
 
-describe.only('Storefronts route', function() {
+describe('Storefronts route', function() {
     this.timeout(30000);
 
     before(async() => {
@@ -25,7 +25,7 @@ describe.only('Storefronts route', function() {
 
     after(async() => await server.stop());
 
-    it.only('responds with the storefront data', async() => {
+    it('responds with the storefront data', async() => {
         const id = 9;
 
         const response = await server.inject({
